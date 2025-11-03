@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_persona_user,access.persona.user,model_ejemplo_persona,base.group_user,1,1,1,1
+access_pais_user,access.pais.user,model_ejemplo_pais,base.group_user,1,1,1,1
+access_curso_user,access.curso.user,model_ejemplo_curso,base.group_user,1,1,1,1
+access_telefono_user,access.telefono.user,model_ejemplo_telefono_persona,base.group_user,1,1,1,1

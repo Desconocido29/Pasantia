@@ -1,0 +1,41 @@
+<odoo>
+    <record id='view_user_persona_form' model='ir.ui.view'>
+        <field name='name'>persona.form</field>
+        <field name='model'>persona</field>
+        <field name='arch' type='xml'>
+            <form string="Nombres">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='view_user_persona_list' model='ir.ui.view'>
+        <field name='name'>user.persona.list</field>
+        <field name='model'>persona</field>
+        <field name='arch' type='xml'>
+            <list string='Nombres'>
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+      <record id='action_persona' model='ir.actions.act_window'>
+        <field name='name'>persona</field>
+        <field name='res_model'>persona</field>
+        <field name='view_mode'>list,form</field>
+    </record>
+
+
+
+    <menuitem id="menu_user_persona_root" name="persona_root" sequence="10" />
+    <menuitem id="menu_user_persona" name="persona" parent='menu_user_persona_root'
+    action='action_persona' sequence="20" />
+  
+
+
+
+</odoo>

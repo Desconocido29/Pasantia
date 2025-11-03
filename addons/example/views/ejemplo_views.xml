@@ -1,0 +1,139 @@
+<odoo>
+
+    <record id="view_persona_form" model="ir.ui.view">
+        <field name="name">persona.form</field>
+        <field name="model">ejemplo.persona</field>
+        <field name="arch" type="xml">
+            <form string="Persona">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="pais_id"/> 
+                        <field name="telefonos"/>
+                        <field name="cursos" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_persona_list" model="ir.ui.view">
+        <field name="name">persona.list</field>
+        <field name="model">ejemplo.persona</field>
+        <field name="arch" type="xml">
+            <list string="Personas">
+                <field name="name"/>
+                <field name="pais_id"/> 
+            </list>
+        </field>
+    </record>
+
+
+    <record id="view_pais_list" model="ir.ui.view">
+        <field name="name">pais.list</field>
+        <field name="model">ejemplo.pais</field>
+        <field name="arch" type="xml">
+            <list string="Países">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_pais_form" model="ir.ui.view">
+        <field name="name">pais.form</field>
+        <field name="model">ejemplo.pais</field>
+        <field name="arch" type="xml">
+            <form string="País">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_telefono_list" model="ir.ui.view">
+        <field name="name">telefono.list</field>
+        <field name="model">ejemplo.telefono_persona</field>
+        <field name="arch" type="xml">
+            <list string="Teléfonos">
+                <field name="persona_id"/>
+                <field name="telefono"/> 
+            </list>
+        </field>
+    </record>
+
+    <record id="view_telefono_form" model="ir.ui.view">
+        <field name="name">telefono.form</field>
+        <field name="model">ejemplo.telefono_persona</field>
+        <field name="arch" type="xml">
+            <form string="Teléfono de la Persona">
+                <sheet>
+                    <group>
+                        <field name="persona_id"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+    <record id="view_curso_list" model="ir.ui.view">
+        <field name="name">curso.list</field>
+        <field name="model">ejemplo.curso</field>
+        <field name="arch" type="xml">
+            <list string="Cursos">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_curso_form" model="ir.ui.view">
+        <field name="name">curso.form</field>
+        <field name="model">ejemplo.curso</field>
+        <field name="arch" type="xml">
+            <form string="Curso">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_persona" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">ejemplo.persona</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_pais" model="ir.actions.act_window">
+        <field name="name">Países</field>
+        <field name="res_model">ejemplo.pais</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_curso" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">ejemplo.curso</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_telefono" model="ir.actions.act_window">
+        <field name="name">Teléfonos</field>
+        <field name="res_model">ejemplo.telefono_persona</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menús -->
+    <menuitem id="menu_persona_root" name="Gestión de Personas"/>
+    <menuitem id="menu_persona_sub" name="Personas" parent="menu_persona_root" action="action_persona"/>
+    <menuitem id="menu_pais_sub" name="Países" parent="menu_persona_root" action="action_pais"/>
+    <menuitem id="menu_curso_sub" name="Cursos" parent="menu_persona_root" action="action_curso"/>
+    <menuitem id="menu_telefono_sub" name="Teléfonos" parent="menu_persona_root" action="action_telefono"/>
+</odoo>
