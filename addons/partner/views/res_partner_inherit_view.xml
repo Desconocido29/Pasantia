@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_partner_form_inherit_custom" model="ir.ui.view">
+        <field name="name">res.partner.inherit.form.custom</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='category_id']" position="after">
+                <group string="Actualizacion de contacto">
+                    <field name="ocupacion"/>
+                    <field name="representante_id"/>
+                    <!-- <field name="tarea_id"/>
+                    <field name="proyecto_id"/>
+                    <field name="total_tarea" readonly="1"/> -->
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

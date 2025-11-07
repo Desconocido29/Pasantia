@@ -11,6 +11,8 @@ services:
       - HOST=db
       - USER=odoo
       - PASSWORD=odoo
+    
+    user: "0"
     volumes:
       - odoo-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons

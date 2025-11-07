@@ -2,16 +2,15 @@
     "name": "Gestion Persona",
     "version": "1.0",
     "category": "Productivity",
-    "summary": "Modulo para gestiorar personas",
+    "summary": "Modulo para gestionar personas",
     "description": """
-        Aqui puedes poner tu nombre
+        Modulo para gestionar personas
     """,
     "author": "Junior Jaime",
-    "website": "https://yourwebsite.com",
     "depends": ["base"],
     "data": [
-        "security/ir.model.access.csv",
         "views/ejemplo_views.xml",
+        "security/ir.model.access.csv"
     ],
     "installable": True,
     "application": True,
