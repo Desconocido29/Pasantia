@@ -1,0 +1,43 @@
+<odoo>
+
+
+
+    <record id="view_transient_form" model="ir.ui.view">
+        <field name="name">kg.transient.form</field>
+        <field name="model">kg.transient</field>
+        <field name="arch" type="xml">
+            <form string="editar">
+                <field name="name"/>
+                <field name="id_animal"/>
+              <button name="Holamundo" type="object" string="Aqui" />
+              <button name="create_animal" type="object" string="crear" />
+              <button name="unlink_animal" type="object" string="eliminar" />
+              <button name="write_animal" type="object" string="actualizar" />
+              <button name="unlink_like_animal" type="object" string="eliminar like" />
+              <button name="adios_mundo_button" type="object" string="Adios Mundo" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transient_list" model="ir.ui.view">
+        <field name="name">kg.transient.list</field>
+        <field name="model">kg.transient</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="id_animal"/>
+
+            </list>
+        </field>
+    </record>
+
+    <record id="action_transient" model="ir.actions.act_window">
+        <field name="name">transient</field>
+        <field name="res_model">kg.transient</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="model_ejemplo_bottom" name="Bottom" action="action_transient" sequence="10"/>
+
+
+</odoo>

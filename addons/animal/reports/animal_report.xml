@@ -1,0 +1,35 @@
+<odoo>
+    <template id="report_animal_template">
+        <t t-call="web.external_layout">
+            <main>
+                <t t-foreach="docs" t-as="animal">
+                    <div class="page">
+                        <h2 style="text-align:center;">Reporte del Animal</h2>
+
+                        <p><strong>Nombre:</strong> <t t-esc="animal.name"/></p>
+                        <p><strong>Patas:</strong> <t t-esc="animal.patas"/></p>
+                        <p><strong>Cliente:</strong> <t t-esc="animal.nombre_cliente.name"/></p>
+
+                        <t t-if="animal.raza">
+                            <p><strong>Razas:</strong></p>
+                            <ul>
+                                <t t-foreach="animal.raza" t-as="raza">
+                                    <li><t t-esc="raza.name"/></li>
+                                </t>
+                            </ul>
+                        </t>
+                    </div>
+                </t>
+            </main>
+        </t>
+    </template>
+
+    <record id="report_animal_pdf_action" model="ir.actions.report">
+        <field name="name">Reporte de Animal</field>
+        <field name="model">animal.model</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">animal.report_animal_template</field>
+        <field name="report_file">animal.report_animal_template</field>
+        <field name="print_report_name">'Reporte - %s' % object.name</field>
+    </record>
+</odoo>

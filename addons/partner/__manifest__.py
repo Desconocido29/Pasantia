@@ -4,7 +4,7 @@
     'summary': 'campos personalizados ocupacion y representante al formulario de contactos',
     'category': 'Contacts',
     'author': 'Junior Jaime',
-    'depends': ['base', 'contacts'],
+    'depends': ['base', 'contacts','project','hr'],
     'data': [
         'views/res_partner_inherit_view.xml',
     ],

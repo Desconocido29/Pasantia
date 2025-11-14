@@ -9,9 +9,9 @@
                 <group string="Actualizacion de contacto">
                     <field name="ocupacion"/>
                     <field name="representante_id"/>
-                    <!-- <field name="tarea_id"/>
+                    <field name="tarea_id"/>
                     <field name="proyecto_id"/>
-                    <field name="total_tarea" readonly="1"/> -->
+                    <field name="total_tarea" readonly="1"/>
                 </group>
             </xpath>
 

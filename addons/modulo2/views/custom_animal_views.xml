@@ -1,0 +1,17 @@
+<odoo>
+
+    <record id="view_partner_form_inherit_custom" model="ir.ui.view">
+        <field name="name">animal_model.inherit.form.custom</field>
+        <field name="model">animal.model</field>
+        <field name="inherit_id" ref="animal.view_animal_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='categoria']" position="after">
+                <button name="Holamundo" string="Hola Mundo" type="object" class="btn-primary"/>
+                <button name="adios_mundo_cruel" string="Adios Mundo" type="object" class="btn-danger"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

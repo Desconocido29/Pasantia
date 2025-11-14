@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kg_transient,access.kg_transient,model_kg_transient,base.group_user,1,1,1,1
+access_kg_animal,access.kg_animal,model_kg_animal,base.group_user,1,1,1,1
+
